@@ -1,0 +1,39 @@
+HELP.md
+
+### IDE FILES ###
+*.swp
+*.swo
+Session.vim
+.cproject
+.idea
+*.iml
+.vscode
+.vscode/
+.project
+.favorites.json
+.settings/
+.vs/
+.pytest_cache
+
+### Project ###
+__pycache__
+**.log
+dist
+build
+.venv
+.env
+
+### IMAGES ###
+/resources/**/**.jpg
+/resources/**/**.png
+/tests/**/**.jpg
+/tests/**/**.png
+
+### ANY ###
+/resources/config.json
+**.exe
+/dist
+/build
+logs
+log
+

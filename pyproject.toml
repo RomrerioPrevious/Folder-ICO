@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "folderico"
+version = "0.1.0"
+description = "This is a project for creating icons for folders."
+authors = ["RomrerioPrevious <ggJohn12345@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pyqt6 = "^6.10.2"
+pillow = "^12.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
