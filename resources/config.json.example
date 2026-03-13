@@ -10,5 +10,17 @@
         "size": [540, 180]
       }
     }
+  },
+  "path": {
+    "default": {
+      "resource": "resources",
+      "folder-presets": "resources/folders",
+      "logs": "logs"
+    },
+    "custom": {
+      "resource": "resources",
+      "folder-presets": "resources/folders",
+      "logs": "logs"
+    }
   }
 }

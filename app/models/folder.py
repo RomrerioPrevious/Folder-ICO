@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from .folder_color import FolderColor
+from .folder_icon import FolderIcon
 
 
 @dataclass
@@ -7,10 +8,8 @@ class Folder:
     name: str
     folder_style: str
 
-    icon_path: str
-    icon_cords: [int, int]
-    icon_size: [int, int]
+    icon: FolderIcon | None
 
-    main_color: FolderColor
-    background_color: FolderColor
-    frame_color: FolderColor
+    main_color: FolderColor | None
+    background_color: FolderColor | None
+    frame_color: FolderColor | None
