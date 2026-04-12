@@ -28,7 +28,7 @@ class PreviewArea(QFrame):
             p.setFixedSize(point_size, point_size)
             # Контур 4px по ТЗ
             p.setStyleSheet(
-                f"background: white; border: {self.line_width}px solid black; border-radius: {point_size // 2}px;")
+                f"background: white; border: {self.line_width}px solid gray; border-radius: {point_size // 2}px;")
 
         self.point_a.move(50, 150)
         self.point_b.move(220, 150)
@@ -47,7 +47,7 @@ class PreviewArea(QFrame):
             painter = QPainter(self)
             painter.setRenderHint(QPainter.RenderHint.Antialiasing)
             # Линия 4px по ТЗ
-            pen = QPen(QColor(0, 0, 0), self.line_width)
+            pen = QPen(QColor(128, 128, 128), self.line_width)
             painter.setPen(pen)
             painter.drawLine(self.point_a.geometry().center(),
                              self.point_b.geometry().center())

@@ -1,4 +1,5 @@
 from PyQt6.QtGui import QIcon
+from PyQt6.QtWidgets import QApplication
 from qfluentwidgets import NavigationItemPosition, FluentWindow
 from qfluentwidgets import FluentIcon as FIF
 from .frames import FluentFrame
@@ -33,7 +34,19 @@ class MainWindow(FluentWindow):
         self.addSubInterface(self.settingInterface, FIF.SETTING, lang["settings"], NavigationItemPosition.BOTTOM)
 
     def initWindow(self):
-        self.resize(1000, 500)
-        self.move(int(1920 / 2 - 500), int(1080 / 2 - 250))
+        self.setFixedSize(1200, 600)
+        self.center_window()
         self.setWindowIcon(QIcon(":/qfluentwidgets/images/logo.png"))
         self.setWindowTitle(CONFIG["app"]["title"])
+
+    def center_window(self):
+        screen = QApplication.primaryScreen()
+        screen_geometry = screen.availableGeometry()
+
+        window_geometry = self.frameGeometry()
+
+        center_point = screen_geometry.center()
+
+        window_geometry.moveCenter(center_point)
+
+        self.move(window_geometry.topLeft())
