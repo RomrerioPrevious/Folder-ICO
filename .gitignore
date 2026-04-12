@@ -30,7 +30,7 @@ build
 /tests/**/**.png
 
 ### ANY ###
-/resources/config.json
+/configs/config.json
 **.exe
 /dist
 /build

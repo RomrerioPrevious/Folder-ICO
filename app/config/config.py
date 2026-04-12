@@ -18,7 +18,7 @@ def get_global_path(path: str = None) -> Path | None:
 
 
 GLOBAL_PATH = get_global_path()
-GLOBAL_CONFIG_PATH = get_global_path("resources/config.json")
+GLOBAL_CONFIG_PATH = get_global_path("configs/config.json")
 
 with open(GLOBAL_CONFIG_PATH, "r", encoding="UTF-8") as file:
     CONFIG = json.load(file)
