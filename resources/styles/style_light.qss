@@ -1,0 +1,8 @@
+MainWindow {
+    background-color: rgb(249, 249, 249);
+}
+
+MainWindow>QLabel {
+    color: --ThemeColorPrimary;
+    font: 24px --FontFamilies;
+}

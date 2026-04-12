@@ -32,6 +32,13 @@ GLOBAL_FOLDER_PRESETS_PATH = get_global_path(PATH_CONFIG["folder-presets"])
 GLOBAL_LOG_PATH = get_global_path(PATH_CONFIG["logs"])
 GLOBAL_LANG_PATH = get_global_path(PATH_CONFIG["lang"])
 
+with open(GLOBAL_LANG_PATH, "r", encoding="UTF-8") as file:
+    LANG = json.load(file)
+
+try:
+    CURRENT_LANG = LANG[SETTINGS_CONFIG["lang"]]
+except KeyError:
+    CURRENT_LANG = LANG["eng"]
 
 logging.basicConfig(
     level=logging.INFO, filename=GLOBAL_LOG_PATH.joinpath("logs.log"), filemode="a",

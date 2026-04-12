@@ -1,0 +1,50 @@
+{
+  "eng": {
+    "title": "English",
+    "left_navigation": {
+      "edit": "Edit",
+      "recent": "Recent",
+      "settings": "Settings",
+      "donate": "Donate"
+    },
+    "settings": {
+      "theme": {
+        "title": "Application Theme",
+        "description": "Adjust the appearance of your application",
+        "choose": {
+          "light": "Light",
+          "dark": "Dark",
+          "system": "Follow System Settings"
+        }
+      },
+      "download": {
+        "title": "Download folder",
+        "description": "Choose"
+      }
+    }
+  },
+  "rus": {
+    "title": "Русский",
+    "left_navigation": {
+      "edit": "Редактор",
+      "recent": "Недавние",
+      "settings": "Настройки",
+      "donate": "Поддержать"
+    },
+    "settings": {
+      "theme": {
+        "title": "Тема приложения",
+        "description": "Измените внешний вид вашего приложения",
+        "choose": {
+          "light": "Светлая",
+          "dark": "Темная",
+          "system": "Как в системе"
+        }
+      },
+      "download": {
+        "title": "Папка загрузки",
+        "description": "Выбрать"
+      }
+    }
+  }
+}

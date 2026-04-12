@@ -1,13 +1,15 @@
 {
   "app": {
-    "name": "Folder ICO",
+    "title": "Folder ICO",
     "icon": "/none.ico",
     "settings": {
       "default": {
-        "size": [540, 180]
+        "size": [540, 180],
+        "lang": "eng"
       },
       "custom": {
-        "size": [540, 180]
+        "size": [540, 180],
+        "lang": "eng"
       }
     }
   },
@@ -15,12 +17,14 @@
     "default": {
       "resource": "resources",
       "folder-presets": "resources/folders",
-      "logs": "logs"
+      "logs": "logs",
+      "lang": "resources/lang.json"
     },
     "custom": {
       "resource": "resources",
       "folder-presets": "resources/folders",
-      "logs": "logs"
+      "logs": "logs",
+      "lang": "resources/lang.json"
     }
   }
 }

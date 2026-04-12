@@ -6,11 +6,13 @@ authors = ["RomrerioPrevious <ggJohn12345@yandex.ru>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.13"
 pyqt6 = "^6.10.2"
 pillow = "^12.1.1"
 pytest = "^9.0.2"
 icecream = "^2.1.10"
+winmica = "^1.0.3"
+pyqt6-fluent-widgets = "^1.11.1"
 
 
 [build-system]
