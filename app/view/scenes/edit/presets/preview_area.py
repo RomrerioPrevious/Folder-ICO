@@ -1,8 +1,8 @@
-from PyQt6.QtCore import Qt
+from PyQt6.QtCore import Qt, QPoint, QRect
 from PyQt6.QtGui import QPixmap, QPainter, QPen, QColor
 from PyQt6.QtWidgets import QFrame, QLabel
 
-from app.view.components.draggable_element import DraggableElement
+from app.view.components import DraggableElement, ResizableIcon
 
 
 class PreviewArea(QFrame):
@@ -21,6 +21,21 @@ class PreviewArea(QFrame):
         self.folder_back.setAlignment(Qt.AlignmentFlag.AlignCenter)
         self.folder_back.resize(300, 250)
 
+        # Плейсхолдер картинки
+        self.img_placeholder = ResizableIcon(self)
+        self.img_placeholder.setStyleSheet("""
+                            ResizableIcon {
+                                background: rgba(0, 120, 212, 0.1);
+                                border: 1px solid rgba(0, 120, 212, 0.3);
+                                border-radius: 4px;
+                                color: #0078d4;
+                                font-weight: bold;
+                            }
+                        """)
+        self.img_placeholder.setText("IMG")
+        self.img_placeholder.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.img_placeholder.move(50, 50)
+
         # Точки (Круги)
         self.point_a = DraggableElement(self)
         self.point_b = DraggableElement(self)
@@ -32,14 +47,6 @@ class PreviewArea(QFrame):
 
         self.point_a.move(50, 150)
         self.point_b.move(220, 150)
-
-        # Плейсхолдер картинки
-        self.img_placeholder = DraggableElement(self)
-        self.img_placeholder.setFixedSize(80, 80)
-        self.img_placeholder.setStyleSheet("background: rgba(0, 120, 212, 0.2); border: 2px dashed #0078d4;")
-        self.img_placeholder.setText("IMG")
-        self.img_placeholder.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        self.img_placeholder.move(110, 50)
 
     def paintEvent(self, event):
         super().paintEvent(event)
